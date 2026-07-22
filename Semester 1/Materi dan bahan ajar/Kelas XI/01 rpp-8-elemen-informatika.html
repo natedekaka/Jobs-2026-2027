@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Lengkap & RPP - 8 Elemen Informatika Fase F</title>
+<style>
+  :root {
+    --primary: #1a56db;
+    --primary-light: #e8effd;
+    --primary-dark: #1e40af;
+    --accent: #f59e0b;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #6b7280;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --border: #d1d5db;
+    --red: #ef4444;
+    --green: #10b981;
+    --purple: #8b5cf6;
+    --teal: #14b8a6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--gray-900);
+    background: #fff;
+    line-height: 1.7;
+    padding: 2rem 1rem;
+  }
+  .container { max-width: 210mm; margin: 0 auto; }
+
+  header {
+    text-align: center; margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px double var(--primary);
+  }
+  header h1 { font-size: 1.8rem; color: var(--primary-dark); }
+  header .sub { color: var(--gray-700); font-size: 1rem; margin-top: 0.25rem; }
+  header .meta {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem;
+    margin-top: 0.75rem; font-size: 0.8rem;
+  }
+  header .meta span {
+    background: var(--gray-100); padding: 0.2rem 0.75rem; border-radius: 999px;
+    border: 1px solid var(--gray-200);
+  }
+
+  section { margin-bottom: 2rem; }
+  h2 {
+    font-size: 1.25rem; color: var(--primary-dark);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 0.3rem; margin-bottom: 0.75rem;
+  }
+  h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--gray-800); }
+  h4 { font-size: 0.95rem; margin: 0.6rem 0 0.25rem; color: var(--gray-700); }
+  p { font-size: 0.925rem; margin-bottom: 0.5rem; }
+  ul, ol { padding-left: 1.35rem; margin: 0.3rem 0 0.5rem; }
+  li { margin-bottom: 0.25rem; font-size: 0.925rem; }
+  strong { color: var(--gray-900); }
+  em { color: var(--gray-600); }
+
+  .table-wrap { overflow-x: auto; margin: 0.5rem 0; }
+  table {
+    width: 100%; border-collapse: collapse; font-size: 0.85rem;
+    min-width: 500px;
+  }
+  th, td {
+    border: 1px solid var(--border); padding: 0.4rem 0.6rem;
+    text-align: left; vertical-align: top;
+  }
+  th { background: var(--primary); color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  .elemen-detail {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--gray-50);
+  }
+  .elemen-detail .head {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .elemen-detail .head .kode {
+    display: inline-block;
+    background: var(--primary); color: #fff;
+    font-weight: 800; font-size: 1rem;
+    padding: 0.2rem 0.6rem; border-radius: 6px;
+    min-width: 2.8rem; text-align: center;
+  }
+  .elemen-detail .head .nama {
+    font-weight: 700; font-size: 1rem; color: var(--gray-900);
+  }
+  .elemen-detail .def { font-size: 0.925rem; margin-bottom: 0.4rem; }
+  .elemen-detail .contoh-box {
+    background: #fff;
+    border: 1px dashed var(--gray-300);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.3rem;
+  }
+  .elemen-detail .contoh-box .label {
+    font-weight: 600; color: var(--accent);
+    font-size: 0.8rem; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .elemen-detail .contoh-box ul { margin: 0.2rem 0 0; }
+
+  .jp-list { counter-reset: jp; }
+  .jp-item {
+    counter-increment: jp;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 0.75rem 0.75rem 2.8rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+    background: #fff;
+  }
+  .jp-item::before {
+    content: counter(jp);
+    position: absolute; left: 0.65rem; top: 0.65rem;
+    width: 1.7rem; height: 1.7rem; line-height: 1.7rem;
+    text-align: center; border-radius: 50%;
+    background: var(--primary); color: #fff;
+    font-weight: 700; font-size: 0.85rem;
+  }
+  .jp-item .jp-title {
+    font-weight: 700; color: var(--primary-dark);
+    font-size: 0.95rem;
+  }
+  .jp-item ul { margin-top: 0.3rem; }
+  .jp-item .narasi {
+    margin-top: 0.4rem;
+    background: var(--primary-light);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border-left: 3px solid var(--primary);
+  }
+  .jp-item .narasi strong { color: var(--primary); }
+
+  .tips {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0.75rem 0;
+  }
+  .tips ul { padding-left: 1.2rem; }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 700;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    margin-right: 0.25rem;
+  }
+  .badge-blue { background: var(--primary); color: #fff; }
+  .badge-yellow { background: var(--accent); color: #fff; }
+  .badge-green { background: var(--green); color: #fff; }
+  .badge-purple { background: var(--purple); color: #fff; }
+  .badge-red { background: var(--red); color: #fff; }
+  .badge-teal { background: var(--teal); color: #fff; }
+
+  .callout {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+  .callout-info { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .callout-warning { background: #fffbeb; border: 1px solid #fde68a; }
+  .callout-tip { background: #ecfdf5; border: 1px solid #a7f3d0; }
+
+  .soal-box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0;
+    background: #fff;
+    page-break-inside: avoid;
+  }
+  .soal-box .no {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    width: 1.6rem; height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    margin-right: 0.4rem;
+  }
+  .soal-box .pertanyaan { font-weight: 600; font-size: 0.9rem; }
+  .soal-box .opsi { padding-left: 2.1rem; font-size: 0.85rem; margin: 0.2rem 0; }
+  .soal-box .opsi label { display: block; padding: 0.15rem 0; cursor: pointer; }
+  .soal-box .opsi input[type="radio"] { margin-right: 0.35rem; }
+  .jawab-lines {
+    padding-left: 2.1rem; margin: 0.2rem 0;
+  }
+  .jawab-lines .line {
+    display: block;
+    border-bottom: 1px solid var(--gray-300);
+    height: 1.8rem; margin-bottom: 0.2rem;
+  }
+  .jawab-lines.tinggi .line { height: 3rem; }
+
+  .diagnostik-table th:first-child { width: 8%; }
+  .diagnostik-table th:nth-child(2) { width: 42%; }
+  .diagnostik-table th:nth-child(3) { width: 30%; }
+  .diagnostik-table th:last-child { width: 20%; }
+
+  .glossary dt {
+    font-weight: 700; color: var(--primary-dark);
+    margin-top: 0.3rem;
+  }
+  .glossary dd {
+    margin-left: 1.2rem; font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .prep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.6rem;
+    margin: 0.5rem 0;
+  }
+  .prep-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem;
+    background: #fff;
+  }
+  .prep-card .step {
+    font-weight: 700; color: var(--primary);
+    font-size: 0.85rem;
+  }
+  .prep-card .desc { font-size: 0.8rem; color: var(--gray-700); }
+
+  .kartu-contoh {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem;
+    margin: 0.3rem 0;
+  }
+  .kartu-contoh .soal { font-weight: 600; }
+  .kartu-contoh .jawab { font-size: 0.85rem; color: var(--gray-600); margin-top: 0.2rem; }
+
+  @media print {
+    @page { margin: 15mm 15mm 20mm; size: A4; }
+    body { padding: 0; font-size: 10.5pt; line-height: 1.55; }
+    .container { max-width: 100%; }
+    .jp-item, .elemen-detail, .prep-card { break-inside: avoid; }
+    section { page-break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+    header { margin-bottom: 1.5rem; }
+    .table-wrap { page-break-inside: avoid; }
+    .no-print { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 0.75rem 0.5rem; }
+    header h1 { font-size: 1.3rem; }
+    .prep-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ============ HEADER ============ -->
+<header>
+  <h1>8 Elemen Informatika Fase F</h1>
+  <div class="sub">Materi Lengkap + RPP 5 JP untuk Guru Kelas 11</div>
+  <div class="meta">
+    <span>Kelas 11</span>
+    <span>Fase F</span>
+    <span>Informatika</span>
+    <span>5 JP &times; 45 menit</span>
+    <span>Kurikulum Merdeka</span>
+  </div>
+</header>
+
+<!-- ============ APA ITU INFORMATIKA ============ -->
+<section>
+  <h2>A. Apa Itu Informatika?</h2>
+  <p>Informatika bukan sekadar "pelajaran komputer". Ini adalah <strong>ilmu tentang struktur, prinsip, dan praktik pengolahan informasi</strong> menggunakan komputer. Di Kurikulum Merdeka Fase F (kelas 11-12), Informatika terdiri dari <strong>8 elemen</strong> yang saling terkait.</p>
+  <div class="callout callout-info">
+    <strong>Pesan kunci untuk siswa:</strong> Informatika adalah cara berpikir, bukan sekadar cara mengetik. 8 elemen ini adalah puzzle yang membentuk satu gambaran besar: bagaimana data &rarr; informasi &rarr; solusi nyata.
+  </div>
+</section>
+
+<!-- ============ ASESMEN DIAGNOSTIK ============ -->
+<section>
+  <h2>B. Asesmen Diagnostik Awal (Diberikan Sebelum JP 1)</h2>
+  <div class="callout callout-warning">
+    <strong>Penting:</strong> Asesmen ini diberikan <strong>sebelum</strong> materi dimulai (bisa di pertemuan sebelumnya atau 15 menit pertama JP 1). Tujuannya bukan untuk nilai, tapi untuk <strong>memetakan pengetahuan awal</strong> siswa. Hasilnya akan menentukan penekanan materi pada JP 1-2.
+  </div>
+
+  <h3>Petunjuk untuk Guru</h3>
+  <ol>
+    <li>Cetak soal berikut (1 lembar bolak-balik A4) untuk setiap siswa.</li>
+    <li>Berikan waktu 15-20 menit.</li>
+    <li>Jangan beri tahu jawaban — biarkan siswa mengerjakan dengan pengetahuannya sendiri.</li>
+    <li>Kumpulkan, periksa cepat, lalu gunakan tabel interpretasi di bawah untuk menyesuaikan pengajaran.</li>
+    <li>Simpan lembar jawaban siswa sebagai <strong>data awal</strong> (bandingkan dengan exit ticket JP 5 untuk melihat perkembangan).</li>
+  </ol>
+
+  <div style="border:2px solid var(--primary-dark);border-radius:10px;padding:1.25rem;margin:1rem 0;background:#fff;">
+
+    <h3 style="text-align:center;margin-top:0;color:var(--primary-dark);border:none;padding:0;">Lembar Asesmen Diagnostik</h3>
+    <p style="text-align:center;font-size:0.85rem;color:var(--gray-600);">8 Elemen Informatika Fase F &mdash; Kelas 11</p>
+    <p style="text-align:center;font-size:0.8rem;color:var(--gray-600);">Nama: ________________________ &ensp; Kelas: ________ &ensp; Tanggal: ________</p>
+
+    <div class="soal-box">
+      <span class="no">1</span>
+      <span class="pertanyaan">Menurut kamu, apa itu "Informatika"? Tuliskan dengan bahasamu sendiri.</span>
+      <div class="jawab-lines tinggi"><span class="line"></span><span class="line"></span></div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">2</span>
+      <span class="pertanyaan">Apa saja yang kamu bayangkan ketika mendengar kata "komputer"? (centang semua yang kamu tahu)</span>
+      <div class="opsi">
+        <label><input type="checkbox"> CPU / Processor</label>
+        <label><input type="checkbox"> RAM / Memori</label>
+        <label><input type="checkbox"> Hardisk / SSD</label>
+        <label><input type="checkbox"> Sistem Operasi (Windows, Linux, macOS)</label>
+        <label><input type="checkbox"> Jaringan Internet</label>
+        <label><input type="checkbox"> Algoritma / Coding</label>
+        <label><input type="checkbox"> Data / Database</label>
+        <label><input type="checkbox"> Aplikasi (Microsoft Office, Google, dll)</label>
+      </div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">3</span>
+      <span class="pertanyaan">Bagaimana cara Google menampilkan hasil pencarian dengan cepat? Jelaskan menurut tebakanmu.</span>
+      <div class="jawab-lines"><span class="line"></span><span class="line"></span></div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">4</span>
+      <span class="pertanyaan">Menurut kamu, mana yang lebih cepat: mencari buku di perpustakaan dengan membaca satu per satu dari rak A-Z, atau dengan melihat katalog dulu? <strong>Mengapa?</strong></span>
+      <div class="opsi">
+        <label><input type="radio" name="q4"> Membaca satu per satu</label>
+        <label><input type="radio" name="q4"> Melihat katalog dulu</label>
+      </div>
+      <div class="jawab-lines"><span class="line"></span></div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">5</span>
+      <span class="pertanyaan">Pasangkan kegiatan di kiri dengan istilah yang paling sesuai di kanan. (Tarik garis atau tulis huruf)</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3rem 1rem;padding-left:2.1rem;font-size:0.85rem;margin-top:0.3rem;">
+        <div><strong>Kegiatan</strong></div><div><strong>Istilah</strong></div>
+        <div>A. Membuat akun TikTok baru</div><div>_ Algoritma</div>
+        <div>B. Langkah-langkah login ke email</div><div>_ Data</div>
+        <div>C. Mencari pola nilai ulangan</div><div>_ Jaringan</div>
+        <div>D. WiFi di sekolah</div><div>_ Analisis</div>
+        <div>E. Menyimpan 500 foto di HP</div><div>_ Storage</div>
+      </div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">6</span>
+      <span class="pertanyaan">Pernahkah kamu mengalami FYP/beranda media sosial yang isinya itu-itu terus? Menurut kamu, kenapa itu terjadi?</span>
+      <div class="jawab-lines tinggi"><span class="line"></span><span class="line"></span></div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">7</span>
+      <span class="pertanyaan">Apa itu "coding" atau "programming"? Pernah kamu coba sebelumnya? (Jika ya, apa yang kamu buat?)</span>
+      <div class="jawab-lines"><span class="line"></span><span class="line"></span></div>
+    </div>
+
+    <div class="soal-box">
+      <span class="no">8</span>
+      <span class="pertanyaan">Dari skala 1-5, seberapa tertarik kamu dengan pelajaran Informatika? (lingkari)</span>
+      <div style="padding-left:2.1rem;font-size:1.2rem;letter-spacing:1rem;margin:0.2rem 0;">
+        1 &ensp; 2 &ensp; 3 &ensp; 4 &ensp; 5
+      </div>
+      <div style="padding-left:2.1rem;font-size:0.75rem;color:var(--gray-600);">(1 = tidak tertarik, 5 = sangat tertarik)</div>
+    </div>
+
+  </div><!-- end lembar diagnostik -->
+
+  <h3>Tabel Interpretasi Hasil &amp; Tindak Lanjut</h3>
+  <div class="table-wrap">
+  <table class="diagnostik-table">
+    <thead>
+      <tr><th>No</th><th>Yang Diukur</th><th>Jika Jawaban Siswa...</th><th>Tindak Lanjut Guru</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Persepsi awal tentang Informatika</td>
+        <td>Hanya menyebut "komputer", "mengetik", "MS Office"</td>
+        <td>Tekankan di JP 1 bahwa Informatika &ne; komputer. Informatika adalah <em>cara berpikir</em>.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Kosakata teknis yang dikenal</td>
+        <td>Menceklist &le; 3 item</td>
+        <td>Kosakata teknis perlu diperkenalkan bertahap. Fokus ke analogi/contoh (bagian C).</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Pemahaman cara kerja internet/pencarian</td>
+        <td>Menjawab "sihir", "otomatis", atau tidak tahu</td>
+        <td>Perkuat JKI (packet switching, DNS) di JP 1 dengan analogi sederhana.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Intuisi berpikir komputasional (BK)</td>
+        <td>Memilih "membaca satu per satu"</td>
+        <td>BK perlu penekanan ekstra di JP 1 & 4 (simulasi sandwich sangat penting!).</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Kemampuan mencocokkan konsep + contoh</td>
+        <td>Menjawab salah &ge; 3 pasangan</td>
+        <td>Konsep abstrak perlu lebih banyak contoh konkret. Optimalkan JP 3 (Tebak Elemen).</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Kesadaran tentang dampak sosial (DSI)</td>
+        <td>Tidak bisa menjelaskan fenomena filter bubble</td>
+        <td>DSI perlu contoh yang dekat (TikTok, YouTube). Sisipkan juga di diskusi JP 2.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Pengalaman coding sebelumnya</td>
+        <td> Belum pernah coding</td>
+        <td>Wajar &mdash; AP akan dimulai setelah pertemuan ini. Jangan ekspektasi tinggi.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Tingkat ketertarikan</td>
+        <td>Nilai 1-2</td>
+        <td>Anda perlu "jualan" Informatika dengan contoh seru (game, TikTok, ChatGPT).</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Kesimpulan: 3 Profil Kelas</h3>
+  <p>Berdasarkan hasil diagnostik, umumnya kelas akan masuk ke salah satu profil berikut:</p>
+  <table>
+    <thead>
+      <tr><th>Profil</th><th>Ciri-ciri</th><th>Saran Strategi</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pemula</strong> (mayoritas siswa &le; 3 checkbox, jawab "tidak tahu")</td>
+        <td>Pengetahuan minimal, kosakata teknis rendah</td>
+        <td>JP 1-2: pelan, banyak analogi. JP 4: wajib. JP 3: beri kartu lebih sederhana. Kurangi ekspektasi.</td>
+      </tr>
+      <tr>
+        <td><strong>Menengah</strong> (campuran)</td>
+        <td>Sebagian tahu istilah, sebagian tidak</td>
+        <td>Gunakan JP 3 untuk peer teaching — siswa yang lebih paham bisa membantu kelompoknya.</td>
+      </tr>
+      <tr>
+        <td><strong>Mahir</strong> (banyak siswa centang &ge; 5, pernah coding)</td>
+        <td>Sudah familiar, mungkin bosan</td>
+        <td>Tantang mereka di JP 3: minta mereka buat skenario sendiri. Di JP 4: jadikan mereka "asisten" simulasi.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-info">
+    <strong>Ingat:</strong> Asesmen diagnostik ini <strong>bukan untuk nilai rapor</strong>. Ini untuk <em>kepentingan guru</em> menyesuaikan strategi. Simpan lembar jawaban dan bandingkan dengan hasil exit ticket JP 5 &mdash; di situlah kamu bisa melihat <strong>dampak pengajaranmu</strong>.
+  </div>
+</section>
+
+<!-- ============ PRASYARAT GURU ============ -->
+<section>
+  <h2>C. Persiapan Guru Sebelum Mengajar</h2>
+  <p>berikut langkah konkret yang harus dilakukan <strong>sebelum JP 1</strong>:</p>
+
+  <div class="prep-grid">
+    <div class="prep-card">
+      <div class="step">1. Tonton Video Ini</div>
+      <div class="desc">Cari di YouTube: <em>"8 Elemen Informatika Kurikulum Merdeka"</em> atau <em>"Apa itu Informatika Fase F"</em>. Minimal 2 video agar paham konteks.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">2. Baca Materi di Bawah</div>
+      <div class="desc">Baca <strong>bagian C</strong> dokumen ini (penjelasan 8 elemen) sampai benar-benar paham. Catat poin yang masih bingung.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">3. Siapkan Contoh Sendiri</div>
+      <div class="desc">Ganti contoh-contoh di materi dengan yang relevan dengan siswa Anda (misal: TikTok, MLBB, Gojek, dll).</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">4. Buat Slide</div>
+      <div class="desc">Buat 10-12 slide di Canva/PPT: judul, CP, 8 slide @ 1 elemen, penutup. Setiap slide: ikon + nama + 1 contoh.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">5. Siapkan Kartu Tebak Elemen</div>
+      <div class="desc">Print 8 kartu skenario (nanti ada contohnya di bagian D). Gunting, siap untuk JP 3.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">6. Siapkan Simulasi BK</div>
+      <div class="desc">Siapkan gambar/alat peraga sandwich (roti, selai, pisang, keju) untuk JP 4. Bisa pakai kertas gambar.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">7. Tes Print</div>
+      <div class="desc">Print dokumen ini A4, pastikan layoutnya rapi. Bawa sebagai pegangan mengajar.</div>
+    </div>
+    <div class="prep-card">
+      <div class="step">8. Hafalkan Urutan</div>
+      <div class="desc">Hafalkan: <strong>BK, TIK, SK, JKI, AD, AP, DSI, PLB</strong>. Buat jembatan keledai: <em>"Beli Tiket Sama JKI, AD-AP DSi PLB"</em>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 ELEMEN LENGKAP ============ -->
+<section>
+  <h2>D. Materi Lengkap: 8 Elemen Informatika</h2>
+  <p>Berikut penjelasan detail setiap elemen. Bacalah sampai paham, karena ini yang akan Anda sampaikan ke siswa.</p>
+
+  <!-- 1. BK -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">BK</span>
+      <span class="nama">Berpikir Komputasional (Computational Thinking)</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Cara berpikir untuk menyelesaikan masalah dengan menerapkan konsep dan teknik ilmu komputer. Ini adalah <strong>pondasi</strong> dari semua elemen lain.
+    </div>
+    <div class="def">
+      <strong>4 Pilar BK:</strong>
+      <ol>
+        <li><strong>Dekomposisi</strong> &mdash; memecah masalah besar menjadi bagian kecil.</li>
+        <li><strong>Pengenalan Pola</strong> &mdash; mencari kesamaan/pattern dari masalah yang pernah diselesaikan.</li>
+        <li><strong>Abstraksi</strong> &mdash; memfilter informasi, fokus pada yang esensial saja.</li>
+        <li><strong>Algoritma</strong> &mdash; menyusun langkah-langkah logis dan sistematis.</li>
+      </ol>
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret untuk Dijelaskan ke Siswa</div>
+      <ul>
+        <li><strong>Binary search:</strong> Mencari nama di buku telepon tebal. Buka tengah, bandingkan, buang separuh, ulangi. Lebih cepat daripada baca satu per satu.</li>
+        <li><strong>Dekomposisi:</strong> Menyusun acara pensi sekolah &rarr; pecah menjadi: seksi acara, konsumsi, dokumentasi, dekorasi.</li>
+        <li><strong>Algoritma:</strong> Resep masakan &rarr; langkah demi langkah, urutannya penting (misal: masak air dulu baru masukkan mie).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. TIK -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">TIK</span>
+      <span class="nama">Teknologi Informasi dan Komunikasi</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Segala teknologi yang digunakan untuk mengolah, menyimpan, dan menyebarkan informasi. Mencakup perangkat keras, perangkat lunak, dan infrastruktur digital.
+    </div>
+    <div class="def">
+      <strong>Yang dipelajari:</strong> Produktivitas tools (Office, Google Workspace), kolaborasi daring, etika digital, manajemen file, version control.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>Git & GitHub:</strong> Version control untuk tugas kelompok. Mirip "save game" &mdash; bisa lihat siapa mengubah apa dan kapan. Bisa balik ke versi sebelumnya kalau ada error.</li>
+        <li><strong>Google Docs/Sheets:</strong> Kolaborasi real-time tanpa harus kirim file bolak-balik.</li>
+        <li><strong>Manajemen file:</strong> Struktur folder yang rapi (seperti lemari arsip) supaya file mudah ditemukan.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. SK -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">SK</span>
+      <span class="nama">Sistem Komputer</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Pemahaman tentang bagaimana komputer bekerja &mdash; dari hardware (CPU, RAM, storage) hingga software (OS, aplikasi). Bagaimana komponen-komponen ini berinteraksi.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>CPU = dapur restoran:</strong> CPU adalah koki (memproses instruksi). RAM adalah meja kerja (tempat sementara). Storage (HDD/SSD) adalah gudang bahan makanan.</li>
+        <li><strong>Fetch-Decode-Execute:</strong> CPU mengambil instruksi (fetch), menerjemahkannya (decode), lalu menjalankan (execute). Kayak siswa: ambil soal, baca soal, kerjakan soal.</li>
+        <li><strong>Booting:</strong> Komputer "bangun tidur" &mdash; dari listrik menyala, BIOS cek hardware, OS dimuat ke RAM.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. JKI -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">JKI</span>
+      <span class="nama">Jaringan Komputer dan Internet</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Cara komputer saling terhubung dan berkomunikasi. Meliputi topologi jaringan, protokol (TCP/IP, HTTP, DNS), keamanan jaringan, dan cara internet bekerja.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>Packet switching:</strong> Kamu mau ngirim novel 500 halaman ke teman. Buktunya dikirim utuh, tapi dipecah jadi halaman per halaman (packet), masing-masing cari jalur sendiri, sampai di tujuan diurutkan lagi.</li>
+        <li><strong>DNS:</strong> Buku telepon internet. Kamu ketik "google.com", DNS menerjemahkan ke alamat IP 142.250.xx.xx.</li>
+        <li><strong>WiFi vs LAN:</strong> WiFi itu radio (nirkabel), LAN itu kabel &mdash; sama-sama ngirim data, beda medium.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. AD -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">AD</span>
+      <span class="nama">Analisis Data</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Proses mengumpulkan, membersihkan, memproses, dan menarik kesimpulan dari data untuk mendukung pengambilan keputusan. Di era digital, data adalah "minyak bumi baru".
+    </div>
+    <div class="def">
+      <strong>Tahapan AD:</strong> Kumpulkan data &rarr; bersihkan data (hapus duplikat/error) &rarr; visualisasikan (grafik) &rarr; interpretasi &rarr; keputusan.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>Sentiment analysis:</strong> Analisis ribuan komentar TikTok/YouTube &rarr; apakah mayoritas positif, negatif, atau netral? Merek bisa tahu produknya disukai atau tidak.</li>
+        <li><strong>Data nilai kelas:</strong> Kumpulkan nilai ulangan, buat grafik, cari rata-rata, nilai tertinggi/terendah. Guru bisa lihat mana materi yang paling sulit.</li>
+        <li><strong>Rekomendasi Shopee/Tokopedia:</strong> "Produk yang sering dibeli bersama" &rarr; itu hasil analisis data transaksi.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6. AP -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">AP</span>
+      <span class="nama">Algoritma dan Pemrograman</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Menulis instruksi yang bisa dijalankan komputer untuk menyelesaikan masalah. Algoritma adalah <em>apa</em> yang harus dilakukan, pemrograman adalah <em>bagaimana</em> menuliskannya dalam bahasa komputer (Python, JavaScript, dll).
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>Flowchart mesin kopi:</strong> Mulai &rarr; taruh cangkir &rarr; pilih jenis kopi &rarr; tekan tombol &rarr; tunggu 30 detik &rarr; selesai. Ini algoritma.</li>
+        <li><strong>Scratch/Blockly:</strong> Pemrograman visual seperti menyusun puzzle &mdash; cocok untuk pemula.</li>
+        <li><strong>Python sederhana:</strong> Program konversi suhu, kalkulator, atau game tebak angka.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7. DSI -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">DSI</span>
+      <span class="nama">Dampak Sosial Informatika</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Kajian tentang bagaimana teknologi informasi mempengaruhi masyarakat &mdash; sisi positif dan negatif. Termasuk etika digital, privasi data, bias algoritma, hoaks, cyberbullying, dan kesenjangan digital.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>Bias algoritma:</strong> Rekomendasi TikTok/FYP menunjukkan konten yang itu-itu saja (echo chamber/filter bubble). Kamu nonton 1 video masak &rarr; besok FYP penuh video masak.</li>
+        <li><strong>Filter bubble:</strong> Google search hasilnya berbeda untuk orang berbeda &mdash; kamu dikurung dalam "gelembung" informasi yang sesuai preferensimu.</li>
+        <li><strong>Privasi data:</strong> Aplikasi gratis "menjual" data kita. "Kalau produk gratis, <em>kamu</em> adalah produknya."</li>
+        <li><strong>Hoaks & misinformation:</strong> Berita palsu menyebar 6x lebih cepat dari berita benar di Twitter.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8. PLB -->
+  <div class="elemen-detail">
+    <div class="head">
+      <span class="kode">PLB</span>
+      <span class="nama">Praktik Lintas Bidang</span>
+    </div>
+    <div class="def">
+      <strong>Definisi:</strong> Menerapkan semua elemen di atas dalam proyek nyata yang melibatkan <strong>bidang lain</strong> (biologi, fisika, seni, sosial, dll). Ini adalah "ujian akhir" dari pembelajaran Informatika.
+    </div>
+    <div class="def">
+      <strong>PLB &ne; proyek biasa.</strong> Dalam PLB, Informatika adalah <em>alat</em> untuk menyelesaikan masalah di bidang lain. Bukan sekadar bikin website, tapi bikin website <strong>untuk</strong> sesuatu.
+    </div>
+    <div class="contoh-box">
+      <div class="label">Contoh Konkret</div>
+      <ul>
+        <li><strong>IoT cuaca &times; pertanian:</strong> Sensor suhu/kelembaban (SK, JKI) + analisis data (AD) + program otomatis nyalain sprinkler (AP) + dampak pada hasil panen (DSI).</li>
+        <li><strong>Aplikasi deteksi sampah plastik:</strong> Kamera (TIK) + machine learning (AD/AP) + edukasi masyarakat (DSI).</li>
+        <li><strong>Game edukasi sejarah:</strong> Algoritma (AP) + data sejarah (AD) + dampak pembelajaran (DSI) + kolaborasi tim (TIK).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RPP 5 JP LENGKAP ============ -->
+<section>
+  <h2>E. RPP Lengkap: Skenario 5 JP</h2>
+  <p>Berikut panduan langkah demi langkah. Setiap JP ada <strong>narasi</strong> yang bisa Anda baca langsung atau adaptasi.</p>
+
+  <div class="jp-list">
+
+    <!-- JP 1 -->
+    <div class="jp-item">
+      <div class="jp-title">JP 1 &ndash; Pembukaan & 4 Elemen Awal (BK, TIK, SK, JKI)</div>
+      <ul>
+        <li><strong>Pembukaan (5&prime;):</strong> "Halo, siapa yang tadi pagi buka HP? Siapa yang pakai TikTok/IG? Kalian sudah pakai Informatika tanpa sadar. Hari ini kita akan kenalan dengan 8 elemen Informatika."</li>
+        <li><strong>Paparan BK, TIK, SK, JKI (20&prime;):</strong> Slide per slide. Jelaskan 1 elemen &asymp; 5 menit. Gunakan contoh dari bagian C di atas.</li>
+        <li><strong>Diskusi (15&prime;):</strong> "Coba sebutkan, dalam kegiatan sehari-hari, mana yang termasuk BK? TIK?" Biarkan siswa mengaitkan.</li>
+        <li><strong>Penutup (5&prime;):</strong> "Besok kita lanjut 4 elemen sisanya."</li>
+      </ul>
+      <div class="narasi">
+        <strong>Narasi guru JP 1:</strong> "Bayangkan kalian mau nyari buku di perpustakaan. Kalian bisa cek katalog dulu (BK: dekomposisi, kita pisah berdasarkan kategori). Terus kalian buka HP buat cek di aplikasi perpus (TIK). Terus HP kalian butuh CPU buat jalanin aplikasinya (SK). Dan aplikasi itu butuh internet buat ngambil data buku (JKI). Nah, 4 hal ini terjadi dalam satu kegiatan sederhana!"
+      </div>
+    </div>
+
+    <!-- JP 2 -->
+    <div class="jp-item">
+      <div class="jp-title">JP 2 &ndash; 4 Elemen Sisanya (AD, AP, DSI, PLB)</div>
+      <ul>
+        <li><strong>Paparan AD, AP, DSI, PLB (20&prime;):</strong> Sama seperti JP 1, 1 elemen &asymp; 5 menit.</li>
+        <li><strong>Tanya jawab (15&prime;):</strong> "Dari 8 elemen yang sudah kita pelajari, mana yang paling menarik menurutmu? Kenapa?"</li>
+        <li><strong>Ice breaking (10&prime;):</strong> Teka-teki algoritma: "Sebutkan langkah-langkah menggosok gigi dengan benar!" &rarr; tunjuk 2-3 siswa.</li>
+      </ul>
+      <div class="narasi">
+        <strong>Narasi guru JP 2:</strong> "Sekarang kita ke 4 elemen yang lebih seru. Kalian suka ditawarin produk di Shopee? Itu AD (analisis data kebiasaan belanja). Kalian suka main game? Itu AP (algoritma dan pemrograman). Kalian pernah ngerasa FYP TikTok itu-itu aja? Itu DSI (dampak filter bubble). Nah, semua ini dipraktekkin di PLB &mdash; proyek nyata yang menggabungkan semuanya."
+      </div>
+    </div>
+
+    <!-- JP 3 -->
+    <div class="jp-item">
+      <div class="jp-title">JP 3 &ndash; Aktivitas "Tebak Elemen"</div>
+      <ul>
+        <li><strong>Instruksi (5&prime;):</strong> Bagi kelas jadi 8 kelompok. Tiap kelompok dapat 1 kartu skenario. Tugas: tebak elemen apa yang paling dominan, dan jelaskan alasannya.</li>
+        <li><strong>Kerja kelompok (20&prime;):</strong> Siswa diskusi dan menyiapkan presentasi 2 menit.</li>
+        <li><strong>Presentasi (15&prime;):</strong> Tiap kelompok maju 2 menit.</li>
+        <li><strong>Klarifikasi (5&prime;):</strong> Guru luruskan jika ada tebakan yang kurang tepat.</li>
+      </ul>
+      <div class="narasi">
+        <strong>Kartu skenario (print & gunting):</strong>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 1: "Kamu searching 'sejarah Jepang' di Google, dalam 0,5 detik muncul 5 juta hasil."</div>
+          <div class="jawab"><strong>Jawaban:</strong> JKI (jaringan + DNS + server) dan BK (algoritma pencarian).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 2: "Kamu bikin akun TikTok, terus FYP-mu langsung muncul video kucing lucu terus."</div>
+          <div class="jawab"><strong>Jawaban:</strong> AD (analisis data preferensimu) dan DSI (filter bubble).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 3: "Kamu dan 3 teman ngerjain presentasi bareng lewat Google Slides dari rumah masing-masing."</div>
+          <div class="jawab"><strong>Jawaban:</strong> TIK (tools kolaborasi) dan JKI (internet).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 4: "Kamu bikin flowchart cara login ke email, terus kamu tulis langkah-langkahnya."</div>
+          <div class="jawab"><strong>Jawaban:</strong> AP (algoritma) dan BK (dekomposisi langkah).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 5: "Kamu buka HP, pencet tombol power, lihat logo, tunggu, baru bisa buka aplikasi."</div>
+          <div class="jawab"><strong>Jawaban:</strong> SK (booting, CPU, RAM).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 6: "Kamu ngerjain proyek IPA: ngukur suhu ruangan tiap jam, masukin ke Excel, bikin grafik, lalu nyimpulin."</div>
+          <div class="jawab"><strong>Jawaban:</strong> AD (analisis data) dan PLB (lintas bidang IPA).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 7: "Kamu liat berita di WA: 'Vaksin berbahaya!' Tapi ternyata itu hoaks."</div>
+          <div class="jawab"><strong>Jawaban:</strong> DSI (dampak sosial, misinformasi).</div>
+        </div>
+        <div class="kartu-contoh">
+          <div class="soal">Kartu 8: "Kamu bikin program Python buat ngitung nilai akhir rapor."</div>
+          <div class="jawab"><strong>Jawaban:</strong> AP (pemrograman) dan AD (olah data nilai).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JP 4 -->
+    <div class="jp-item">
+      <div class="jp-title">JP 4 &ndash; Simulasi Berpikir Komputasional (Unplugged)</div>
+      <ul>
+        <li><strong>Aktivitas "Processor Sandwich" (25&prime;):</strong>
+          <ol>
+            <li>Guru jadi "programmer", satu siswa jadi "CPU", siswa lain jadi "memori".</li>
+            <li>Guru memberikan instruksi langkah demi langkah untuk "membuat sandwich" (ambil roti, oles selai, tambah pisang, tutup).</li>
+            <li>"CPU" hanya bisa menjalankan 1 instruksi per waktu (fetch-decode-execute).</li>
+            <li>Sengaja beri instruksi ambigu: "taruh selai" (tanpa bilang pakai pisau, tanpa bilang berapa banyak) &rarr; siswa akan bingung &rarr; ini menunjukkan pentingnya algoritma yang <em>presisi</em>.</li>
+          </ol>
+        </li>
+        <li><strong>Refleksi 4 pilar BK (20&prime;):</strong>
+          <ul>
+            <li><strong>Dekomposisi:</strong> Membuat sandwich dipecah jadi langkah kecil.</li>
+            <li><strong>Pengenalan pola:</strong> Instruksi ini mirip dengan resep masakan lain.</li>
+            <li><strong>Abstraksi:</strong> Kita tidak peduli warna roti/merk selai, yang penting langkahnya.</li>
+            <li><strong>Algoritma:</strong> Urutan langkah harus tepat (kalau oles selai dulu baru ambil roti, gagal).</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="narasi">
+        <strong>Tips:</strong> Jika tidak ada alat peraga, gambar di papan tulis atau minta siswa membayangkan. Yang penting adalah <em>pengalaman</em> menjadi processor yang menjalankan instruksi.
+      </div>
+    </div>
+
+    <!-- JP 5 -->
+    <div class="jp-item">
+      <div class="jp-title">JP 5 &ndash; Refleksi & Asesmen Formatif</div>
+      <ul>
+        <li><strong>Exit ticket (15&prime;):</strong> Bagikan kertas kecil/sticky notes. Tulis: (1) nama, (2) 1 elemen favorit, (3) 1 contoh baru dari kehidupanmu yang termasuk elemen itu.</li>
+        <li><strong>Presentasi sukarela (15&prime;):</strong> Tunjuk 3-4 siswa membacakan exit ticket-nya. Beri apresiasi.</li>
+        <li><strong>Simpul & kaitan P5/PLB (10&prime;):</strong> "8 elemen ini bukan terpisah. Kalau kalian bikin proyek P5 tentang sampah plastik, kalian pakai AD buat data, AP buat program, DSI buat edukasi, SK buat sensor &mdash; semuanya jadi satu."</li>
+        <li><strong>Penutup (5&prime;):</strong> "Pertemuan depan kita akan mulai praktik AP (coding). Siapkan laptop."</li>
+      </ul>
+      <div class="narasi">
+        <strong>Contoh exit ticket ideal:</strong> "Elemen favorit saya AD. Contoh: Saya suka liat statistik pemain MLBB saya &mdash; win rate, hero favorit, damage rata-rata. Itu analisis data."
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ASESMEN ============ -->
+<section>
+  <h2>F. Asesmen Formatif</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Teknik</th><th>Instrumen</th><th style="width:20%">Waktu</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Observasi</td><td>Catat partisipasi diskusi, antusiasme simulasi</td><td>JP 1-5</td></tr>
+      <tr><td>Kuis lisan</td><td>Kartu "Tebak Elemen" &mdash; kebenaran tebakan + alasan</td><td>JP 3</td></tr>
+      <tr><td>Unjuk kerja</td><td>Rubrik simulasi BK: ketepatan urutan instruksi</td><td>JP 4</td></tr>
+      <tr><td>Exit ticket</td><td>Kesesuaian contoh dengan elemen yang dipilih</td><td>JP 5</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ GLOSARIUM ============ -->
+<section>
+  <h2>G. Glosarium (Istilah Penting untuk Guru)</h2>
+  <dl class="glossary">
+    <dt>Algoritma</dt>
+    <dd>Urutan langkah logis untuk menyelesaikan masalah. Contoh: resep masakan.</dd>
+    <dt>Binary Search</dt>
+    <dd>Teknik pencarian dengan membagi data menjadi dua bagian setiap langkah. Cepat &amp; efisien.</dd>
+    <dt>Booting</dt>
+    <dd>Proses komputer menyala dari kondisi mati hingga siap pakai.</dd>
+    <dt>CPU (Central Processing Unit)</dt>
+    <dd>"Otak" komputer yang menjalankan instruksi program.</dd>
+    <dt>Dekomposisi</dt>
+    <dd>Memecah masalah kompleks menjadi bagian-bagian kecil yang lebih mudah diselesaikan.</dd>
+    <dt>DNS (Domain Name System)</dt>
+    <dd>Sistem yang menerjemahkan nama domain (google.com) ke alamat IP (142.250.x.x).</dd>
+    <dt>Echo Chamber / Filter Bubble</dt>
+    <dd>Kondisi di mana seseorang hanya terpapar informasi yang memperkuat keyakinannya sendiri.</dd>
+    <dt>Fetch-Decode-Execute</dt>
+    <dd>Siklus kerja CPU: ambil instruksi, terjemahkan, jalankan. Terjadi jutaan kali per detik.</dd>
+    <dt>Flowchart</dt>
+    <dd>Diagram alur yang menggambarkan langkah-langkah algoritma secara visual.</dd>
+    <dt>IoT (Internet of Things)</dt>
+    <dd>Perangkat fisik (sensor, kamera) yang terhubung ke internet dan bisa saling bertukar data.</dd>
+    <dt>Packet Switching</dt>
+    <dd>Teknik mengirim data dengan memecahnya menjadi paket kecil, masing-masing mencari jalur sendiri ke tujuan.</dd>
+    <dt>Sentiment Analysis</dt>
+    <dd>Teknik menganalisis teks untuk menentukan apakah opini positif, negatif, atau netral.</dd>
+    <dt>Version Control</dt>
+    <dd>Sistem yang mencatat setiap perubahan pada file/kode. Git adalah contoh paling populer.</dd>
+  </dl>
+</section>
+
+<!-- ============ TIPS ============ -->
+<section>
+  <h2>H. Tips Pengajaran Tambahan</h2>
+  <div class="tips">
+    <ul>
+      <li><span class="badge badge-blue">Visual</span> Buat slide semenarik mungkin. Gunakan ikon dari <a href="https://flaticon.com" target="_blank">Flaticon</a> atau <a href="https://thenounproject.com" target="_blank">Noun Project</a> untuk setiap elemen.</li>
+      <li><span class="badge badge-yellow">Video</span> Cari video pendek (1-3 menit) tentang masing-masing elemen. YouTube: "Apa itu Computational Thinking?", "Cara Kerja CPU", "Bagaimana Internet Bekerja". Download offline sebagai cadangan.</li>
+      <li><span class="badge badge-green">Relevan</span> Selalu kaitkan dengan aplikasi yang siswa pakai sehari-hari. TikTok, IG, Shopee, Gojek, MLBB, Mobile Legends, ChatGPT &mdash; semuanya bisa dijelaskan dengan 8 elemen.</li>
+      <li><span class="badge badge-purple">Santai</span> JP 1-2 sifatnya pengenalan. Tidak perlu tergesa-gesa. Yang penting siswa paham <em>esensi</em> tiap elemen, bukan hafal definisi.</li>
+      <li><span class="badge badge-red">Jangan</span> Jangan langsung ngoding di JP 1-5. Fase ini adalah <strong>fondasi konseptual</strong>. Praktik coding akan datang di pertemuan-pertemuan setelahnya (elemen AP).</li>
+      <li><span class="badge badge-teal">Catatan</span> Jika waktu kurang, JP 3 (Tebak Elemen) bisa dipotong &rarr; minta tiap kelompok hanya presentasi 1 menit. JP 4 simulasi adalah yang paling penting, jangan dilewatkan.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PENUTUP ============ -->
+<section>
+  <h2>I. Catatan Akhir</h2>
+  <div class="callout callout-tip">
+    <strong>Guru, Anda tidak perlu jadi programmer untuk mengajar 8 elemen ini.</strong> Yang Anda butuhkan adalah <strong>memahami konsep</strong> dan <strong>mampu memberi contoh relevan</strong>. Dokumen ini sudah menyediakan semua yang Anda perlukan. Baca, pahami, praktikkan simulasi di rumah, dan Anda siap mengajar.
+  </div>
+  <div class="callout callout-warning">
+    <strong>Ingat:</strong> Tujuan 5 JP ini adalah <em>membangun rasa ingin tahu</em>, bukan menguji hafalan. Jika siswa pulang dengan pertanyaan "Kenapa FYP TikTokku begitu?" atau "Gimana cara kerja Google?", Anda sudah berhasil.
+  </div>
+</section>
+
+<footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.8rem;text-align:center;color:var(--gray-600);">
+  &copy; 2026 &mdash; Materi Lengkap 8 Elemen Informatika Fase F<br>
+  Dibuat untuk guru Informatika kelas 11. Silakan diedit dan disesuaikan dengan kebutuhan. MGMP INFORMATIKA SMAN 6 CIMAHI
+</footer>
+
+</div>
+</body>
+</html>
