@@ -1,0 +1,3 @@
+prompt Jurnal
+
+buatkan jurnal berisi table | Hari / Tanggal |Jam Ke|	Kelas | Materi Pembelajaran	| Keterangan| .  untuk bulan 7 Tahun 2026 mulai tanggal 20 Juli 2026 sampai dengan 31 Juli 2026,  5 Hari Kerja Senin s.d Jum'at, senin jam ke 11-12 kelas XII-1, Selasa Jam ke 1-3 kelas XII-1, Selasa jam ke 5-6 kelas X-1, Rabu jam ke 1-5 kelas XI-1, Kamis jam ke 1-5 kelas XI-2, Kamis jam ke 7-11 kelas XI-3, jumat jam ke 7-8 kelas X-2. Untuk materi Pembelajaran masih Matrikulasi berupa pengenalan materi dan kesepakatan kelas, keterangan berisi kehadiran siswa kelas X-1 46 siswa X-2 46 siswa XI-1 44 Siswa XI-2 48 siswa XI-3 45 siswa XII-1 34 siswa.
