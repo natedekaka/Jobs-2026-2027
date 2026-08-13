@@ -56,7 +56,7 @@ CPU (Central Processing Unit) adalah komponen utama yang memproses instruksi. Ko
 
 ## E. Contoh Soal
 1. Sebutkan 3 contoh perangkat input!
-2. Apa fungsi dari CPU?
+2. Apa fungsi dari CPU? 
 3. Sebutkan perbedaan HDD dan SSD!
 4. Apa kepanjangan dari ALU?
 
