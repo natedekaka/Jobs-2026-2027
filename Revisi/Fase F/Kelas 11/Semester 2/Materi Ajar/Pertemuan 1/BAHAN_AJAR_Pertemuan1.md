@@ -2,111 +2,198 @@
 ## Pengenalan Python & Google Colab
 *Mengacu pada Panduan Mapel 2025; INFORMATIKA Fase D-F — pendekatan Pembelajaran Mendalam (Memahami → Mengaplikasi → Merefleksi)*
 
+| Informasi | Keterangan |
+|---|---|
+| **Fase / Kelas** | F / Kelas XI |
+| **Alokasi Waktu** | 5 JP × 45 menit (225 menit) |
+| **Elemen CP** | Analisis Data & Algoritma Pemrograman (AP) |
+| **Tujuan Pembelajaran** | Mengenal Python, mengoperasikan Google Colab, menulis program pertama, dan membaca pesan error |
+| **Materi Prasyarat** | Dasar penggunaan browser dan akun Google |
 
+---
 
-### 🧠 Memahami — Membangun Pemahaman Awal
+## A. Kisah Pemantik 🎬
 
-## A. Tujuan Pembelajaran
-Setelah mempelajari materi ini, siswa mampu:
-1. Menjelaskan apa itu Python dan kegunaannya
-2. Mengakses dan menggunakan Google Colab
-3. Menulis program Python pertama dengan print()
-4. Membaca dan memahami pesan error sederhana
+> **"Buku Resep Ajaib"**
+>
+> Dina ingin mesin kopinya otomatis menyajikan minuman sesuai pesanan: memilih biji, menggiling, mengatur suhu air. Semua instruksi itu harus ditulis sebagai kumpulan perintah yang dipahami mesin — persis seperti **bahasa pemrograman**. Ia lalu menemukan **Python**, bahasa yang mudah dibaca seperti bahasa Inggris, yang kini dipakai untuk aplikasi, data, hingga kecerdasan buatan.
+>
+> **Pertanyaan pemantik:** Apa yang terjadi jika perintah mengandung satu kesalahan kecil (lupa tanda kutip)? Bagaimana sikap yang tepat saat program menghasilkan error?
 
-## B. Apa Itu Python?
-Python adalah bahasa pemrograman tingkat tinggi (high-level) yang dirancang untuk mudah dibaca dan ditulis. Dibuat oleh Guido van Rossum pada tahun 1991. Nama Python diambil dari acara komedi Monty Python's Flying Circus.
+---
 
-**Karakteristik Python:**
-1. **Mudah dibaca** — sintaks mirip bahasa Inggris, menggunakan indentasi
-2. **Interpreted** — kode dijalankan baris per baris (tanpa kompilasi)
-3. **Dinamis** — tidak perlu deklarasi tipe data
-4. **Multipurpose** — bisa untuk web, data, AI, game, otomatisasi
-5. **Open source** — gratis dan punya komunitas besar
+## B. Apa Itu Python? 🐍
 
-**Bidang Penggunaan Python:**
-- Web Development: Django, Flask
-- Data Science & Analisis: Pandas, NumPy
-- Artificial Intelligence: TensorFlow, PyTorch
-- Otomatisasi: script untuk tugas repetitif
-- Pendidikan: bahasa pemrograman pertama
+**Python** adalah bahasa pemrograman tingkat tinggi yang mudah dibaca dan ditulis. Dibuat oleh **Guido van Rossum** (1991), namanya terinspirasi acara *Monty Python's Flying Circus*.
 
-## C. Google Colab
-Kita akan menggunakan Google Colaboratory (Colab) — platform online gratis.
+| Istilah | Arti |
+|---|---|
+| **Bahasa tingkat tinggi** | Bahasa yang mirip bahasa manusia |
+| **Interpreter** | Menjalankan kode baris per baris, tanpa kompilasi |
+| **Sintaks** | Aturan penulisan yang harus diikuti |
+| **Cell** | Kotak tempat menulis & menjalankan kode di Colab |
+| **Output** | Hasil yang tampil setelah kode dijalankan |
 
-**Kelebihan Colab:**
-1. Tidak perlu install apa pun (cukup browser)
-2. Gratis dengan akses GPU/TPU
-3. File otomatis tersimpan di Google Drive
-4. Bisa kolaborasi real-time
+**Karakteristik Python:** mudah dibaca, interpreted, dinamis (tanpa deklarasi tipe), multipurpose (web, data, AI, otomatisasi), dan open source. Bidang pemakaian: web (Django, Flask), data (Pandas, NumPy), AI (TensorFlow, PyTorch), dan otomatisasi tugas.
 
-**Langkah Akses:**
-1. Buka browser → colab.research.google.com
-2. Login dengan akun Gmail
-3. Klik File → New Notebook
-4. Mulai menulis kode di cell
+---
 
-**Shortcut Penting:**
+## C. Google Colab 🧪
+
+**Google Colaboratory (Colab)** adalah platform menulis Python secara online dan gratis.
+
+| Keunggulan | Penjelasan |
+|---|---|
+| Tanpa instalasi | Cukup pakai browser |
+| Gratis | Termasuk akses GPU/TPU |
+| Tersimpan di Drive | Notebook otomatis tersimpan |
+| Kolaborasi | Bisa diedit bersama real-time |
+
+**Langkah akses:** buka `colab.research.google.com` → login Gmail → **File → New Notebook** → ganti judul → tulis kode di cell.
+
 | Shortcut | Fungsi |
-|----------|--------|
-| Shift+Enter | Jalankan cell dan pindah ke cell berikutnya |
-| Ctrl+Enter | Jalankan cell tanpa pindah |
-| Alt+Enter | Jalankan cell dan buat cell baru |
-| Ctrl+M B | Tambah cell code di bawah |
+|---|---|
+| `Shift+Enter` | Jalankan cell, pindah ke cell berikutnya |
+| `Ctrl+Enter` | Jalankan cell tanpa pindah |
+| `Alt+Enter` | Jalankan cell dan buat cell baru |
 
-## D. Program Pertama
+---
+
+## D. Program Pertama — Hello, World! 👋
+
 ```python
 print("Hello, World!")
 ```
+**Output:**
+```
+Hello, World!
+```
 
-**Variasi print():**
+**Variasi `print()`:**
 ```python
 print(123)                 # mencetak angka
-print("Halo", "dunia")    # mencetak beberapa nilai
-print("Hasil:", 5 + 3)    # campur teks dan angka
+print("Halo", "dunia")     # beberapa nilai dipisah spasi
+print("Hasil:", 5 + 3)     # teks + hasil operasi
+print("Python" * 3)        # mengulang teks
+print("Baris 1\nBaris 2")  # \n = baris baru
+```
+**Output:**
+```
+123
+Halo dunia
+Hasil: 8
+PythonPythonPython
+Baris 1
+Baris 2
 ```
 
-## E. Tanda Kutip
-- Teks bisa pakai " " atau ' '
-```python
-print("Pakai kutip dua")
-print('Pakai kutip satu')
-```
-
-## F. Komentar
-```python
-# ini komentar satu baris
-print("Halo")  # komentar di samping kode
-
-'''
-Ini komentar multi-baris
-untuk dokumentasi
-'''
-```
-
-## G. Error Itu Wajar!
-```python
-print("Halo       # SyntaxError: EOL
-print(halo)       # NameError: not defined
-prnt("Halo")      # NameError: prnt not defined
-```
-
-
-### 🔧 Mengaplikasi — Praktik & Penerapan
-
-## H. Latihan
-1. Tulis print("Namamu") — ganti dengan nama sendiri
-2. Tulis print dengan 3 teks berbeda dalam satu perintah
-3. Coba buat error dengan sengaja, baca pesannya
-4. Ganti nama notebook: klik judul → ganti
-5. Simpan: File → Save a copy in Drive
-
-
-### 🔍 Merefleksi — Refleksi & Evaluasi
-
-- Apa konsep paling penting yang kamu pelajari hari ini?
-- Bagaimana konsep ini terkait dengan materi sebelumnya?
-- Skala pemahaman diri: ___/10
-- Apa yang ingin kamu pelajari lebih lanjut?
+> 💡 Teks boleh memakai kutip satu (`'...'`) atau kutip dua (`"..."`); pastikan berpasangan.
 
 ---
-**MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) S2 Pert 1**
+
+## E. Komentar & Error 💬
+
+**Komentar** tidak dieksekusi: pakai `#` untuk satu baris dan `'''...'''` untuk banyak baris.
+
+```python
+# ini komentar
+print("Halo")   # komentar di samping kode
+```
+
+**Error itu wajar — bacalah pesannya:**
+
+| Kode Salah | Error | Arti |
+|---|---|---|
+| `print("Halo` | SyntaxError | Kutip belum ditutup |
+| `print(halo)` | NameError | `halo` belum didefinisikan |
+| `prnt("Halo")` | NameError | Salah ketik nama fungsi |
+| `print(10 + "a")` | TypeError | Tipe data tidak cocok |
+
+---
+
+## F. Contoh Soal & Penyelesaian 📝
+
+**Contoh 1:** Tulis program yang mencetak nama, kelas, dan hobi dalam tiga baris.
+**Jawaban:**
+```python
+print("Nama  : Anisa Rahma")
+print("Kelas : XI-A")
+print("Hobi  : Membaca")
+```
+**Output:**
+```
+Nama  : Anisa Rahma
+Kelas : XI-A
+Hobi  : Membaca
+```
+
+**Contoh 2:** Tentukan output `print("Hasil:", 20 / 4)`.
+**Jawaban:** `Hasil: 5.0`. Angka `20/4` dihitung dulu menjadi `5.0` (float), lalu dicetak setelah teks.
+
+**Contoh 3:** Mengapa `print("Halo)` error?
+**Jawaban:** Kutip pembuka tidak ditutup (SyntaxError: EOL). Perbaiki menjadi `print("Halo")`.
+
+**Contoh 4:** Jelaskan perbedaan output `print("123" + "45")` dan `print(123 + 45)`.
+**Jawaban:** Yang pertama menggabungkan teks → `"12345"`; yang kedua menjumlahkan angka → `168`. Tipe data menentukan cara operator bekerja.
+
+---
+
+## G. Miskonsepsi & Kesalahan Umum 🚫
+
+| Miskonsepsi / Kesalahan | Fakta yang Benar |
+|---|---|
+| "Python harus diinstall dulu" | Colab sudah menyediakan Python via browser |
+| "Error berarti saya gagal" | Error adalah umpan balik yang bisa diperbaiki |
+| "Kutip boleh tidak seimbang" | Kutip harus selalu berpasangan |
+| "Nama fungsi boleh salah ketik" | Nama fungsi harus persis, misal `print` |
+| "Komputer mengerti maksudku walau salah ketik" | Komputer menjalankan perintah yang benar-benar tertulis |
+
+---
+
+## H. Tantangan Praktik (Mengaplikasi) 🎯
+
+**Tantangan 1 (Mudah):** Buka Colab, buat notebook `Pertemuan1_HelloPython`, tulis `print("Hello, World!")`, jalankan dengan `Shift+Enter`.
+
+**Tantangan 2 (Sedang):** Buat program yang mencetak biodata 5 baris: nama lengkap, kelas/jurusan, tanggal lahir, hobi, cita-cita.
+
+**Tantangan 3 (Sedang):** Tulis `print("Halo)`, `print(halo)`, `prnt("Halo")`. Catat pesan error masing-masing, lalu perbaiki agar berjalan.
+
+**Tantangan 4 (Sulit):** Eksperimen dengan `print("Hasil:", 20/4)`, `print("Saya"+" "+"suka")`, `print("Baris 1\nBaris 2")`, `print("\tTab")`. Jelaskan hasilnya.
+
+---
+
+## I. Rangkuman Kunci 🔑
+
+- **Python** = bahasa tingkat tinggi, interpreted, dan multipurpose.
+- **Google Colab** menulis Python online, gratis, tersimpan di Drive.
+- **`print()`** menampilkan teks, angka, dan hasil operasi.
+- Kutip harus seimbang; **komentar** (`#`) tidak dieksekusi.
+- **Error itu normal**; bacalah pesannya (SyntaxError, NameError, TypeError).
+
+---
+
+## J. Glosarium 📖
+
+| Istilah | Arti |
+|---|---|
+| **Python** | Bahasa pemrograman tingkat tinggi |
+| **Interpreter** | Menjalankan kode baris per baris |
+| **Sintaks** | Aturan penulisan kode |
+| **Colab** | Notebook Python online dari Google |
+| **Cell** | Kotak menulis & menjalankan kode |
+| **Output** | Hasil eksekusi kode |
+| **Error** | Pesan kesalahan program |
+
+---
+
+## K. Refleksi (Merefleksi) 🔍
+
+- Konsep apa yang paling penting kamu pelajari hari ini?
+- Bagaimana perasaanmu saat pertama melihat error? Bagaimana seharusnya menyikapinya?
+- Apa yang akan kamu lakukan agar terbiasa menulis kode yang rapi dan teliti?
+- **Skala pemahaman diri:** ____/10
+- Apa yang ingin kamu pelajari lebih lanjut tentang Python?
+
+---
+
+**MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) Semester 2**

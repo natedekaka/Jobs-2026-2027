@@ -1,0 +1,119 @@
+<!--
+================================================================
+  MATERI POSTING BLOGGER - Informatika Fase F Kelas XI Semester 1
+  JUDUL POS: Fungsi Lanjut Excel: Otomatiskan Data Siswa dalam Hitungan Menit
+
+  CARA PAKAI:
+  1. Buka Blogger > postingan baru > mode tampilan HTML
+  2. Tempel (paste) SELURUH isi file ini, lalu terbitkan.
+  3. Di pengaturan pos, isi 'Deskripsi penelusuran' dengan teks:
+
+  DESKRIPSI PENELUSURAN (129 karakter, maks 150):
+  Belajar fungsi lanjut Excel: LEFT, RIGHT, MID, LEN, UPPER, TODAY, DATEDIF, CONCATENATE untuk mengolah data siswa secara otomatis.
+================================================================
+-->
+
+<div class="inff-post">
+<style>
+
+.inff-post{max-width:760px;margin:0 auto;font-family:'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;line-height:1.75;font-size:16px}
+.inff-post *{box-sizing:border-box}
+.inff-svg{width:100%;max-width:660px;height:auto;margin:1.2rem auto;display:block}
+.inff-h2{font-size:1.3rem;font-weight:800;margin:2.2rem 0 .9rem;padding:.7rem 1.1rem;border-radius:10px;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));display:flex;align-items:center;gap:.5rem}
+.inff-box{background:#f8fafc;border:1px solid #e2e8f0;border-left:5px solid var(--ac);border-radius:10px;padding:1rem 1.2rem;margin:1.1rem 0}
+.inff-box-title{font-weight:800;margin-bottom:.4rem}
+.inff-tip{background:#f0fdf4;border-left-color:#16a34a}
+.inff-tip .inff-box-title{color:#15803d}
+.inff-warn{background:#fef2f2;border-left-color:#dc2626}
+.inff-warn .inff-box-title{color:#b91c1c}
+.inff-key{background:#fef9c3;border-left-color:#eab308}
+.inff-key .inff-box-title{color:#a16207}
+.inff-quote{background:#eff6ff;border-left-color:#3b82f6;font-style:italic}
+.inff-table{width:100%;border-collapse:collapse;margin:1.1rem 0;font-size:.95rem}
+.inff-table th{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:.6rem .8rem;text-align:left;font-weight:700}
+.inff-table td{padding:.55rem .8rem;border-bottom:1px solid #e2e8f0;vertical-align:top}
+.inff-table tr:nth-child(even) td{background:#f8fafc}
+.inff-code{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:1rem 1.2rem;font-family:'Courier New',monospace;font-size:.88rem;overflow-x:auto;line-height:1.65;margin:1.1rem 0;white-space:pre}
+.inff-inline{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;padding:.05rem .3rem;font-family:'Courier New',monospace;font-size:.85em;color:#be123c}
+.inff-list-wrap{margin:1.1rem 0}
+.inff-list{padding-left:1.4rem}
+.inff-list li{margin:.35rem 0}
+.inff-qa{border:1px solid #e2e8f0;border-radius:10px;margin:.8rem 0;overflow:hidden}
+.inff-qa-q{background:#f1f5f9;padding:.6rem 1rem;font-weight:700;border-left:4px solid var(--ac)}
+.inff-qa-a{padding:.6rem 1rem}
+.inff-meta{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+.inff-meta b{color:var(--c1)}
+.inff-pemantik{background:#fff7ed;border:1px solid #fed7aa;border-left:6px solid #f97316;border-radius:10px;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.inff-pemantik .inff-pemantik-title{font-weight:800;color:#c2410c;margin-bottom:.4rem}
+.inff-refleksi{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.inff-footer{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;text-align:center;padding:1rem;border-radius:10px;margin-top:2.2rem;font-size:.9rem;font-weight:600}
+.inff-tag{display:inline-block;background:var(--ac);color:#fff;font-size:.78rem;font-weight:700;padding:.2rem .7rem;border-radius:20px;margin:.2rem .2rem 0 0;letter-spacing:.3px}
+
+</style>
+<div style="--c1:#ea580c;--c2:#f59e0b;--ac:#f97316">
+<div class="inff-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" role="img" aria-label="Fungsi Lanjut Excel: Otomatiskan Data Siswa dalam Hitungan Menit"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ea580c"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><rect width="800" height="300" fill="url(#hg)"/><circle cx="60" cy="50" r="90" fill="#ffffff" opacity="0.07"/><circle cx="760" cy="270" r="140" fill="#ffffff" opacity="0.07"/><circle cx="690" cy="30" r="45" fill="#ffffff" opacity="0.10"/><circle cx="40" cy="250" r="34" fill="#ffffff" opacity="0.10"/><text x="400" y="95" text-anchor="middle" font-size="56">📊</text><text x="400" y="112" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Fungsi Lanjut Excel: Otomatiskan Data</text><text x="400" y="152" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Siswa dalam Hitungan Menit</text><text x="400" y="204" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" opacity="0.95" font-family="Segoe UI,Arial,sans-serif">Analisis Data · Pertemuan 12</text></svg></div>
+<div style="text-align:center;margin:.2rem 0 0">
+<span class="inff-tag">Excel</span>
+<span class="inff-tag">Fungsi Teks</span>
+<span class="inff-tag">DATEDIF</span>
+<span class="inff-tag">Kelas 11</span>
+</div>
+<div class="inff-meta"><table style="width:100%%;border-collapse:collapse;font-size:.95rem">
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>📋 Fase / Kelas</b></td><td style="padding:.35rem .6rem">F / Kelas XI</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>⏱ Alokasi Waktu</b></td><td style="padding:.35rem .6rem">5 JP × 45 menit (225 menit)</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>🎯 Elemen CP</b></td><td style="padding:.35rem .6rem">Analisis Data (AD)</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>✅ Tujuan Pembelajaran</b></td><td style="padding:.35rem .6rem">Menggunakan fungsi teks (LEFT, RIGHT, MID, LEN, UPPER, LOWER, TRIM, FIND), fungsi tanggal (TODAY, DAY, MONTH, YEAR, DATEDIF), dan menggabungkannya dalam studi kasus data siswa</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>🔗 Materi Prasyarat</b></td><td style="padding:.35rem .6rem">Pengenalan Excel (rumus dasar, SUM, AVERAGE, IF)</td></tr>
+</table></div>
+<div class="inff-pemantik"><div class="inff-pemantik-title">🎬 Kisah Pemantik — Bendahara OSIS yang Kerepotan</div><p>Bendahara OSIS harus membuat daftar 300 siswa: NIS, email sekolah, dan usia. Jika diketik satu per satu, ia butuh seminggu! Untungnya, ia menemukan bahwa Excel bisa <strong>mengambil potongan nama, membuat email otomatis, dan menghitung usia</strong> hanya dari tanggal lahir — semua selesai dalam hitungan menit.</p><p><b>❓ Pertanyaan pemantik:</b> Data apa di sekolahmu yang dibuat manual tapi sebenarnya bisa otomatis? Fungsi Excel apa yang bisa membantu?</p></div>
+<h2 class="inff-h2">A. Fungsi Teks (String Functions)</h2>
+<p>Fungsi teks digunakan untuk <strong>memanipulasi data teks</strong> di Excel. Setiap rumus wajib diawali tanda <code class='inff-inline'>=</code>.</p>
+<p><strong>1. LEFT, RIGHT, MID — Mengambil Sebagian Teks</strong></p>
+<table class="inff-table"><thead><tr><th>Fungsi</th><th>Sintaks</th><th>Contoh</th><th>Hasil</th></tr></thead><tbody><tr><td>LEFT</td><td>=LEFT(teks, n)</td><td>=LEFT("SMAN 6", 4)</td><td>SMAN</td></tr><tr><td>RIGHT</td><td>=RIGHT(teks, n)</td><td>=RIGHT("SMAN 6", 1)</td><td>6</td></tr><tr><td>MID</td><td>=MID(teks, mulai, n)</td><td>=MID("INFORMATIKA", 2, 5)</td><td>NFORM</td></tr></tbody></table>
+<p><strong>2. LEN — Panjang Teks:</strong> <code class='inff-inline'>=LEN("Python")</code> → 6. Berguna untuk validasi: NIS harus 7 digit? <code class='inff-inline'>=IF(LEN(A2)=7, "Valid", "Cek")</code>.</p>
+<p><strong>3. UPPER, LOWER, PROPER — Ubah Bentuk Huruf</strong></p>
+<table class="inff-table"><thead><tr><th>Fungsi</th><th>Contoh</th><th>Hasil</th></tr></thead><tbody><tr><td>UPPER</td><td>=UPPER("andi")</td><td>ANDI</td></tr><tr><td>LOWER</td><td>=LOWER("ANDI")</td><td>andi</td></tr><tr><td>PROPER</td><td>=PROPER("andi prasetyo")</td><td>Andi Prasetyo</td></tr></tbody></table>
+<p><strong>4. TRIM — Hapus Spasi Berlebih:</strong> <code class='inff-inline'>=TRIM("  Andi   Prasetyo  ")</code> → "Andi Prasetyo".</p>
+<p><strong>5. FIND dan SEARCH — Cari Posisi Teks</strong></p>
+<table class="inff-table"><thead><tr><th>Fungsi</th><th>Contoh</th><th>Hasil</th></tr></thead><tbody><tr><td>FIND</td><td>=FIND("@", "andi@gmail.com")</td><td>5</td></tr><tr><td>SEARCH</td><td>=SEARCH("s", "SMAN 6 Cimahi")</td><td>2</td></tr></tbody></table>
+<div class="inff-box inff-tip"><div class="inff-box-title">💡 Perbedaan FIND dan SEARCH</div>FIND <strong>case-sensitive</strong> (membedakan besar/kecil); SEARCH <strong>tidak</strong> case-sensitive dan mendukung wildcard.</div>
+<h2 class="inff-h2">B. Fungsi Tanggal (Date Functions)</h2>
+<table class="inff-table"><thead><tr><th>Fungsi</th><th>Contoh</th><th>Keterangan</th></tr></thead><tbody><tr><td>TODAY</td><td>=TODAY()</td><td>Tanggal hari ini (update otomatis)</td></tr><tr><td>NOW</td><td>=NOW()</td><td>Tanggal + waktu sekarang</td></tr><tr><td>DAY</td><td>=DAY(TODAY())</td><td>Nomor hari (1–31)</td></tr><tr><td>MONTH</td><td>=MONTH(TODAY())</td><td>Nomor bulan (1–12)</td></tr><tr><td>YEAR</td><td>=YEAR(TODAY())</td><td>Tahun</td></tr><tr><td>DATEDIF</td><td>=DATEDIF(tgl_awal, tgl_akhir, "unit")</td><td>Selisih dua tanggal</td></tr></tbody></table>
+<p><strong>Unit DATEDIF:</strong></p>
+<table class="inff-table"><thead><tr><th>Unit</th><th>Arti</th><th>Contoh</th></tr></thead><tbody><tr><td>"Y"</td><td>Tahun</td><td>=DATEDIF(A2, TODAY(), "Y")</td></tr><tr><td>"M"</td><td>Bulan</td><td>=DATEDIF(A2, TODAY(), "M")</td></tr><tr><td>"D"</td><td>Hari</td><td>=DATEDIF(A2, TODAY(), "D")</td></tr></tbody></table>
+<h2 class="inff-h2">C. Menggabungkan Teks — CONCATENATE / "&amp;"</h2>
+<div class="inff-code">=C2 &amp; " - " &amp; D2
+=CONCATENATE(C2, " - ", D2)</div>
+<p><strong>Contoh — Buat NIS dari beberapa kolom (Tahun Masuk, No Urut, Jurusan):</strong> <code class='inff-inline'>=A2 &amp; "." &amp; TEXT(B2, "000") &amp; "." &amp; C2</code> → <strong>2025.001.A</strong>.</p>
+<div class="inff-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="100%" height="auto" role="img" aria-label="Contoh tabel Excel data siswa"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs><rect x="20" y="10" width="600" height="34" rx="6" fill="#0f172a"/><text x="32" y="32" font-size="13" fill="#e2e8f0" font-family="Courier New,monospace">fx  =DATEDIF(C2, TODAY(), "Y") &amp; " tahun"</text><rect x="20" y="56" width="576" height="40" rx="6" fill="url(#hg)"/><text x="28" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">NIS</text><text x="124" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Nama</text><text x="220" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Tgl Lahir</text><text x="316" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Usia</text><text x="412" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Email</text><text x="508" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Kelas</text><rect x="20" y="96" width="576" height="40" fill="#ecfdf5" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025001</text><text x="124" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Andi Prasetyo</text><text x="220" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">15/03/2008</text><rect x="308" y="96" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">17</text><rect x="404" y="96" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">andi.prasetyo@…</text><text x="508" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-A</text><rect x="20" y="136" width="576" height="40" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025002</text><text x="124" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Budi Santoso</text><text x="220" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">02/07/2008</text><rect x="308" y="136" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">17</text><rect x="404" y="136" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">budi.santoso@…</text><text x="508" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-B</text><rect x="20" y="176" width="576" height="40" fill="#ecfdf5" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025003</text><text x="124" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Citra Lestari</text><text x="220" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">21/11/2007</text><rect x="308" y="176" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">18</text><rect x="404" y="176" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">citra.lestari@…</text><text x="508" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-C</text></svg></div>
+<h2 class="inff-h2">D. Studi Kasus 1 — Data Siswa</h2>
+<p>Buat tabel: <strong>NIS | Nama | Tanggal Lahir | Usia | Email</strong>.</p>
+<table class="inff-table"><thead><tr><th>Kolom</th><th>Formula</th></tr></thead><tbody><tr><td>Usia</td><td>=DATEDIF(C2, TODAY(), "Y")</td></tr><tr><td>Email</td><td>=LOWER(B2) &amp; "@sma6cimahi.sch.id"</td></tr><tr><td>Inisial</td><td>=LEFT(B2, 1) &amp; "."</td></tr></tbody></table>
+<p><strong>Contoh data:</strong> Nama = 'Andi Prasetyo', Tgl Lahir = 15/03/2008 → Usia = <code class='inff-inline'>DATEDIF(C2,TODAY(),"Y")</code> (otomatis); Email = <code class='inff-inline'>andi prasetyo@sma6cimahi.sch.id</code> (lowercase).</p>
+<h2 class="inff-h2">E. Studi Kasus 2 — Validasi Data</h2>
+<table class="inff-table"><thead><tr><th>Data</th><th>Formula Validasi</th></tr></thead><tbody><tr><td>NIS (7 digit)</td><td>=IF(LEN(A2)=7, "Valid", "Error")</td></tr><tr><td>Email (mengandung @)</td><td>=IF(ISNUMBER(FIND("@", D2)), "Valid", "Error")</td></tr><tr><td>Nama huruf kapital</td><td>=IF(EXACT(B2, UPPER(B2)), "Benar", "Cek")</td></tr><tr><td>Umur ≥ 15</td><td>=IF(E2&gt;=15, "SMA", "Belum SMA")</td></tr></tbody></table>
+<p><strong>Ekstrak Jurusan dari NIS</strong> (asumsi: A=IPA, B=IPS, C=Bahasa):</p>
+<div class="inff-code">=IF(RIGHT(A2,1)="A", "IPA", IF(RIGHT(A2,1)="B", "IPS", "Bahasa"))</div>
+<p><strong>Cek Domain Email:</strong> <code class='inff-inline'>=IF(RIGHT(D2, 9)="gmail.com", "Gmail", "Non-Gmail")</code>.</p>
+<h2 class="inff-h2">📝 Contoh Soal &amp; Penyelesaian</h2>
+<div class="inff-qa"><div class="inff-qa-q">❓ Ekstrak 3 digit pertama dari NIS '2025001'!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=LEFT("2025001", 3)</code> → <strong>202</strong>.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Gabungkan nama depan dan belakang dengan spasi (sel A2 = 'Andi', B2 = 'Prasetyo')!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=A2 &amp; " " &amp; B2</code> → <strong>Andi Prasetyo</strong> (atau <code class='inff-inline'>=CONCATENATE(A2," ",B2)</code>).</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Hitung usia dari tanggal lahir 15/03/2008!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=DATEDIF("15/03/2008", TODAY(), "Y")</code> → menghasilkan usia dalam tahun yang otomatis bertambah tiap ulang tahun.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Validasi NIS yang harus 7 digit!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=IF(LEN(A2)=7, "Valid", "Error")</code>. Jika NIS '2025001' (7 digit) → <strong>Valid</strong>.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Buat formula email dari nama 'Andi Prasetyo' dengan format andi.prasetyo@sma6.sch.id!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=LOWER(LEFT(B2,1)) &amp; "." &amp; LOWER(MID(B2, FIND(" ",B2)+1, 99)) &amp; "@sma6.sch.id"</code> → <strong>andi.prasetyo@sma6.sch.id</strong>.</div></div>
+<h2 class="inff-h2">🚫 Miskonsepsi &amp; Kesalahan Umum</h2>
+<table class="inff-table"><thead><tr><th>Miskonsepsi / Kesalahan</th><th>Fakta yang Benar</th></tr></thead><tbody><tr><td>Lupa tanda <code class='inff-inline'>=</code> di awal rumus</td><td>Semua rumus Excel harus diawali <code class='inff-inline'>=</code></td></tr><tr><td>Mengira LEN menghitung kata</td><td>LEN menghitung karakter (termasuk spasi)</td></tr><tr><td>DATEDIF tanpa unit</td><td>DATEDIF wajib mencantumkan unit ("Y"/"M"/"D")</td></tr><tr><td>Mengira FIND dan SEARCH sama persis</td><td>FIND case-sensitive; SEARCH tidak</td></tr><tr><td>Mengetik email satu per satu</td><td>Gunakan rumus LOWER + "&amp;" agar otomatis</td></tr></tbody></table>
+<h2 class="inff-h2">🔑 Rangkuman Kunci</h2>
+<div class="inff-box inff-key"><div class="inff-box-title">Poin penting pertemuan ini:</div>• Fungsi teks: LEFT, RIGHT, MID, LEN, UPPER, LOWER, TRIM, FIND/SEARCH.
+• Fungsi tanggal: TODAY, NOW, DAY, MONTH, YEAR, DATEDIF.
+• Gabungkan teks dengan "&amp;" atau CONCATENATE.
+• DATEDIF menghitung selisih tanggal dalam tahun/bulan/hari.
+• Fungsi bisa digabung (misal LOWER + LEFT + FIND) untuk otomatisasi data.</div>
+<h2 class="inff-h2">📖 Glosarium</h2>
+<table class="inff-table"><thead><tr><th>Istilah</th><th>Arti</th></tr></thead><tbody><tr><td>String</td><td>Data berupa teks</td></tr><tr><td>Case-sensitive</td><td>Membedakan huruf besar/kecil</td></tr><tr><td>Wildcard</td><td>Karakter pengganti (*, ?) pada pencarian</td></tr><tr><td>DATEDIF</td><td>Fungsi selisih tanggal (Y/M/D)</td></tr><tr><td>Validasi</td><td>Pemeriksaan data memenuhi syarat</td></tr><tr><td>CONCATENATE</td><td>Fungsi penggabungan teks</td></tr></tbody></table>
+<h2 class="inff-h2">🔍 Refleksi</h2>
+<div class="inff-refleksi"><b>Pertanyaan untuk merenungkan pemahamanmu:</b>
+<div class="inff-list-wrap"><ul class="inff-list"><li>Konsep apa yang paling penting kamu pelajari hari ini?</li><li>Bagaimana fungsi Excel bisa menghemat waktu mengelola data?</li><li>Bagian mana yang masih sulit dipahami?</li><li>Apa yang ingin kamu pelajari lebih lanjut?</li></ul></div>
+<p style="margin-top:.8rem"><b>Skala pemahaman diri:</b> ____/10</p></div>
+<div class="inff-footer">MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) Semester 1 · Materi dibuat untuk bahan ajar Informatika</div>
+</div></div>

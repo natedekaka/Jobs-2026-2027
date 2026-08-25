@@ -1,0 +1,109 @@
+<!--
+================================================================
+  MATERI POSTING BLOGGER - Informatika Fase F Kelas XI Semester 1
+  JUDUL POS: Latihan PAS Praktik Excel Kelas 11: Rumus Wajib & Contoh Soal
+
+  CARA PAKAI:
+  1. Buka Blogger > postingan baru > mode tampilan HTML
+  2. Tempel (paste) SELURUH isi file ini, lalu terbitkan.
+  3. Di pengaturan pos, isi 'Deskripsi penelusuran' dengan teks:
+
+  DESKRIPSI PENELUSURAN (125 karakter, maks 150):
+  Latihan PAS praktik Excel kelas 11: data siswa, validasi data, laporan otomatis dengan rumus DATEDIF, LOWER, MID, IF lengkap.
+================================================================
+-->
+
+<div class="inff-post">
+<style>
+
+.inff-post{max-width:760px;margin:0 auto;font-family:'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;line-height:1.75;font-size:16px}
+.inff-post *{box-sizing:border-box}
+.inff-svg{width:100%;max-width:660px;height:auto;margin:1.2rem auto;display:block}
+.inff-h2{font-size:1.3rem;font-weight:800;margin:2.2rem 0 .9rem;padding:.7rem 1.1rem;border-radius:10px;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));display:flex;align-items:center;gap:.5rem}
+.inff-box{background:#f8fafc;border:1px solid #e2e8f0;border-left:5px solid var(--ac);border-radius:10px;padding:1rem 1.2rem;margin:1.1rem 0}
+.inff-box-title{font-weight:800;margin-bottom:.4rem}
+.inff-tip{background:#f0fdf4;border-left-color:#16a34a}
+.inff-tip .inff-box-title{color:#15803d}
+.inff-warn{background:#fef2f2;border-left-color:#dc2626}
+.inff-warn .inff-box-title{color:#b91c1c}
+.inff-key{background:#fef9c3;border-left-color:#eab308}
+.inff-key .inff-box-title{color:#a16207}
+.inff-quote{background:#eff6ff;border-left-color:#3b82f6;font-style:italic}
+.inff-table{width:100%;border-collapse:collapse;margin:1.1rem 0;font-size:.95rem}
+.inff-table th{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:.6rem .8rem;text-align:left;font-weight:700}
+.inff-table td{padding:.55rem .8rem;border-bottom:1px solid #e2e8f0;vertical-align:top}
+.inff-table tr:nth-child(even) td{background:#f8fafc}
+.inff-code{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:1rem 1.2rem;font-family:'Courier New',monospace;font-size:.88rem;overflow-x:auto;line-height:1.65;margin:1.1rem 0;white-space:pre}
+.inff-inline{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;padding:.05rem .3rem;font-family:'Courier New',monospace;font-size:.85em;color:#be123c}
+.inff-list-wrap{margin:1.1rem 0}
+.inff-list{padding-left:1.4rem}
+.inff-list li{margin:.35rem 0}
+.inff-qa{border:1px solid #e2e8f0;border-radius:10px;margin:.8rem 0;overflow:hidden}
+.inff-qa-q{background:#f1f5f9;padding:.6rem 1rem;font-weight:700;border-left:4px solid var(--ac)}
+.inff-qa-a{padding:.6rem 1rem}
+.inff-meta{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}
+.inff-meta b{color:var(--c1)}
+.inff-pemantik{background:#fff7ed;border:1px solid #fed7aa;border-left:6px solid #f97316;border-radius:10px;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.inff-pemantik .inff-pemantik-title{font-weight:800;color:#c2410c;margin-bottom:.4rem}
+.inff-refleksi{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.inff-footer{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;text-align:center;padding:1rem;border-radius:10px;margin-top:2.2rem;font-size:.9rem;font-weight:600}
+.inff-tag{display:inline-block;background:var(--ac);color:#fff;font-size:.78rem;font-weight:700;padding:.2rem .7rem;border-radius:20px;margin:.2rem .2rem 0 0;letter-spacing:.3px}
+
+</style>
+<div style="--c1:#dc2626;--c2:#f43f5e;--ac:#ef4444">
+<div class="inff-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" role="img" aria-label="Latihan PAS Praktik Excel Kelas 11: Rumus Wajib &amp; Contoh Soal"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dc2626"/><stop offset="1" stop-color="#f43f5e"/></linearGradient></defs><rect width="800" height="300" fill="url(#hg)"/><circle cx="60" cy="50" r="90" fill="#ffffff" opacity="0.07"/><circle cx="760" cy="270" r="140" fill="#ffffff" opacity="0.07"/><circle cx="690" cy="30" r="45" fill="#ffffff" opacity="0.10"/><circle cx="40" cy="250" r="34" fill="#ffffff" opacity="0.10"/><text x="400" y="95" text-anchor="middle" font-size="56">💻</text><text x="400" y="112" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Latihan PAS Praktik Excel Kelas 11:</text><text x="400" y="152" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Rumus Wajib &amp; Contoh Soal</text><text x="400" y="204" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" opacity="0.95" font-family="Segoe UI,Arial,sans-serif">Praktik Lintas Bidang · Pertemuan 17 — PAS Praktik Excel</text></svg></div>
+<div style="text-align:center;margin:.2rem 0 0">
+<span class="inff-tag">PAS</span>
+<span class="inff-tag">Excel</span>
+<span class="inff-tag">Praktik</span>
+<span class="inff-tag">Kelas 11</span>
+</div>
+<div class="inff-meta"><table style="width:100%%;border-collapse:collapse;font-size:.95rem">
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>📋 Fase / Kelas</b></td><td style="padding:.35rem .6rem">F / Kelas XI</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>⏱ Alokasi Waktu</b></td><td style="padding:.35rem .6rem">5 JP × 45 menit (225 menit)</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>🎯 Elemen CP</b></td><td style="padding:.35rem .6rem">Praktik Lintas Bidang (PLB)</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>✅ Tujuan Pembelajaran</b></td><td style="padding:.35rem .6rem">Mengukur kemampuan praktik Excel: fungsi teks, fungsi tanggal, validasi data, dan laporan otomatis</td></tr>
+<tr><td style="padding:.35rem .6rem;white-space:nowrap;vertical-align:top"><b>🔗 Materi Prasyarat</b></td><td style="padding:.35rem .6rem">Pertemuan 12–13 — Fungsi lanjut Excel, Conditional Formatting, Sort/Filter</td></tr>
+</table></div>
+<div class="inff-pemantik"><div class="inff-pemantik-title">🎬 Kisah Pemantik — Lomba Keterampilan Data</div><p>Sekolah mengadakan lomba keterampilan pengolahan data. Setiap peserta diberi data mentah siswa dan harus menghasilkan laporan yang rapi dan otomatis: usia terhitung sendiri, email terbentuk sendiri, dan validasi langsung muncul. Kamu memakai kemampuan yang sudah kamu latih: LEFT, RIGHT, MID, LEN, DATEDIF, TODAY, IF, dan Conditional Formatting.</p><p><b>❓ Pertanyaan pemantik:</b> Mengapa pemberi kerja sangat menghargai orang yang bisa mengolah data otomatis dengan Excel? Rumus apa yang paling penting untuk laporan data siswa?</p></div>
+<h2 class="inff-h2">A. Format Ujian Praktik</h2>
+<table class="inff-table"><thead><tr><th>Sesi</th><th>Durasi</th><th>Soal</th><th>Bobot</th></tr></thead><tbody><tr><td>Praktik Excel</td><td>60 menit</td><td>3 soal</td><td>100%</td></tr></tbody></table>
+<h2 class="inff-h2">B. Rubrik Penilaian</h2>
+<table class="inff-table"><thead><tr><th>Aspek</th><th>Bobot</th></tr></thead><tbody><tr><td>Kebenaran formula</td><td>40%</td></tr><tr><td>Kerapian format</td><td>30%</td></tr><tr><td>Kelengkapan</td><td>20%</td></tr><tr><td>Efisiensi (tidak manual)</td><td>10%</td></tr></tbody></table>
+<div class="inff-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="100%" height="auto" role="img" aria-label="Contoh tabel Excel data siswa"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs><rect x="20" y="10" width="600" height="34" rx="6" fill="#0f172a"/><text x="32" y="32" font-size="13" fill="#e2e8f0" font-family="Courier New,monospace">fx  =DATEDIF(C2, TODAY(), "Y") &amp; " tahun"</text><rect x="20" y="56" width="576" height="40" rx="6" fill="url(#hg)"/><text x="28" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">NIS</text><text x="124" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Nama</text><text x="220" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Tgl Lahir</text><text x="316" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Usia</text><text x="412" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Email</text><text x="508" y="81" font-size="12" font-weight="800" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif">Kelas</text><rect x="20" y="96" width="576" height="40" fill="#ecfdf5" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025001</text><text x="124" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Andi Prasetyo</text><text x="220" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">15/03/2008</text><rect x="308" y="96" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">17</text><rect x="404" y="96" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">andi.prasetyo@…</text><text x="508" y="121" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-A</text><rect x="20" y="136" width="576" height="40" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025002</text><text x="124" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Budi Santoso</text><text x="220" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">02/07/2008</text><rect x="308" y="136" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">17</text><rect x="404" y="136" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">budi.santoso@…</text><text x="508" y="161" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-B</text><rect x="20" y="176" width="576" height="40" fill="#ecfdf5" stroke="#cbd5e1" stroke-width="1"/><text x="28" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">2025003</text><text x="124" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">Citra Lestari</text><text x="220" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">21/11/2007</text><rect x="308" y="176" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="316" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">18</text><rect x="404" y="176" width="96" height="40" fill="#dcfce7" opacity="0.55"/><text x="412" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">citra.lestari@…</text><text x="508" y="201" font-size="11" fill="#0f172a" font-family="Segoe UI,Arial,sans-serif">XI-C</text></svg></div>
+<h2 class="inff-h2">C. Soal 1 — Data Siswa (40 poin)</h2>
+<p>Buat tabel <strong>10 siswa</strong> dengan struktur: NIS | Nama Lengkap | Kelas | Tgl Lahir | Usia | Email Sekolah.</p>
+<p><strong>Kolom yang menggunakan formula:</strong></p>
+<div class="inff-code">Usia:  =DATEDIF(D2, TODAY(), "Y") &amp; " tahun"
+Email: =LOWER(LEFT(B2,1)) &amp; "." &amp; LOWER(MID(B2, FIND(" ",B2)+1, 99)) &amp; "@sma6.sch.id"
+       → contoh: andi.prasetyo@sma6.sch.id
+Kelas: =IF(MID(A2,8,1)="1","XI-A",IF(MID(A2,8,1)="2","XI-B","XI-C"))</div>
+<p><strong>Kriteria:</strong> semua formula benar (20), format rapi + Freeze Panes (10), Table Style (10).</p>
+<h2 class="inff-h2">D. Soal 2 — Validasi Data (30 poin)</h2>
+<p>Buat tabel validasi <strong>10 baris</strong> dengan 5 jenis validasi:</p>
+<table class="inff-table"><thead><tr><th>Data</th><th>Jenis</th><th>Formula Validasi</th></tr></thead><tbody><tr><td>2025001</td><td>NIS</td><td>=IF(LEN(A2)=7,"Valid","Tidak Valid")</td></tr><tr><td>andi@</td><td>Email</td><td>=IF(ISNUMBER(FIND("@",B2)),"Valid","Tidak Valid")</td></tr><tr><td>ANDI PRASETYO</td><td>Nama</td><td>=IF(EXACT(C2,UPPER(C2)),"Kapital","Cek")</td></tr><tr><td>2008</td><td>Tahun</td><td>=IF(AND(D2&gt;=2008,D2&lt;=2009),"Valid","Cek")</td></tr><tr><td>85</td><td>Nilai</td><td>=IF(AND(E2&gt;=0,E2&lt;=100),"Valid","Cek")</td></tr></tbody></table>
+<p><strong>5 jenis validasi yang harus dibuat:</strong> 1) NIS: panjang 7 digit; 2) Email: mengandung '@'; 3) Nama: huruf kapital semua; 4) Tanggal: tahun 2008–2009; 5) Nilai: rentang 0–100.</p>
+<h2 class="inff-h2">E. Soal 3 — Laporan Otomatis (30 poin)</h2>
+<table class="inff-table"><thead><tr><th>No</th><th>Keterangan</th><th>Formula</th></tr></thead><tbody><tr><td>1</td><td>Tanggal hari ini</td><td>=TODAY()</td></tr><tr><td>2</td><td>Nama bulan</td><td>=TEXT(TODAY(), "MMMM")</td></tr><tr><td>3</td><td>Tahun ini</td><td>=YEAR(TODAY())</td></tr><tr><td>4</td><td>Hari (Senin–Minggu)</td><td>=TEXT(TODAY(), "DDDD")</td></tr><tr><td>5</td><td>Selisih dari 1 Januari tahun ini</td><td>=DATEDIF(DATE(YEAR(TODAY()),1,1), TODAY(), "D")</td></tr><tr><td>6</td><td>Akhir tahun</td><td>=DATE(YEAR(TODAY()),12,31)</td></tr><tr><td>7</td><td>Sisa hari menuju akhir tahun</td><td>=A6 - TODAY()</td></tr></tbody></table>
+<h2 class="inff-h2">📝 Contoh Soal &amp; Penyelesaian</h2>
+<div class="inff-qa"><div class="inff-qa-q">❓ Tulis rumus usia (dalam tahun) dari tanggal lahir di D2!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=DATEDIF(D2, TODAY(), "Y")</code> → menampilkan usia dalam tahun yang otomatis bertambah.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Tulis rumus email dari nama 'Andi Prasetyo' di B2!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=LOWER(LEFT(B2,1)) &amp; "." &amp; LOWER(MID(B2, FIND(" ",B2)+1, 99)) &amp; "@sma6.sch.id"</code> → <code class='inff-inline'>andi.prasetyo@sma6.sch.id</code>.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Tulis rumus validasi NIS harus 7 digit!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=IF(LEN(A2)=7, "Valid", "Tidak Valid")</code>. NIS '2025001' (7 digit) → <strong>Valid</strong>.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Tulis rumus mengecek nilai dalam rentang 0–100!</div><div class="inff-qa-a"><b>Jawaban:</b> <code class='inff-inline'>=IF(AND(E2&gt;=0, E2&lt;=100), "Valid", "Cek")</code>.</div></div>
+<div class="inff-qa"><div class="inff-qa-q">❓ Bagaimana menampilkan sisa hari menuju akhir tahun?</div><div class="inff-qa-a"><b>Jawaban:</b> Gunakan <code class='inff-inline'>=DATE(YEAR(TODAY()),12,31) - TODAY()</code> untuk menghitung selisih hari dari hari ini sampai 31 Desember.</div></div>
+<h2 class="inff-h2">🚫 Miskonsepsi &amp; Kesalahan Umum</h2>
+<table class="inff-table"><thead><tr><th>Miskonsepsi / Kesalahan</th><th>Fakta yang Benar</th></tr></thead><tbody><tr><td>Mengetik data manual padahal bisa rumus</td><td>Ujian menilai efisiensi — gunakan rumus otomatis</td></tr><tr><td>Lupa tanda <code class='inff-inline'>=</code> di awal rumus</td><td>Semua rumus wajib diawali <code class='inff-inline'>=</code></td></tr><tr><td>DATEDIF tanpa unit</td><td>DATEDIF harus menyertakan "Y"/"M"/"D"</td></tr><tr><td>Formula tanpa Freeze Panes saat data panjang</td><td>Freeze Panes memudahkan membaca header</td></tr><tr><td>Tidak menggunakan Table Style</td><td>Kerapian dinilai 30% dari total nilai</td></tr></tbody></table>
+<h2 class="inff-h2">🔑 Rangkuman Kunci</h2>
+<div class="inff-box inff-key"><div class="inff-box-title">Poin penting pertemuan ini:</div>• PAS praktik Excel: 3 soal, 60 menit, berbobot 100%.
+• Soal 1: data siswa — usia (DATEDIF), email (LOWER+MID+FIND), kelas (IF).
+• Soal 2: validasi — LEN, FIND, EXACT, AND.
+• Soal 3: laporan otomatis — TODAY, TEXT, YEAR, DATE, DATEDIF.
+• Rubrik: kebenaran formula 40%, kerapian 30%, kelengkapan 20%, efisiensi 10%.</div>
+<h2 class="inff-h2">📖 Glosarium</h2>
+<table class="inff-table"><thead><tr><th>Istilah</th><th>Arti</th></tr></thead><tbody><tr><td>Validasi</td><td>Pemeriksaan data memenuhi syarat tertentu</td></tr><tr><td>Freeze Panes</td><td>Mengunci baris/kolom agar tetap terlihat saat scroll</td></tr><tr><td>Table Style</td><td>Gaya tabel siap pakai di Excel</td></tr><tr><td>Efisiensi</td><td>Menggunakan rumus otomatis, tidak mengetik manual</td></tr><tr><td>TEXT()</td><td>Fungsi memformat tanggal/angka menjadi teks tertentu</td></tr></tbody></table>
+<h2 class="inff-h2">🔍 Refleksi</h2>
+<div class="inff-refleksi"><b>Pertanyaan untuk merenungkan pemahamanmu:</b>
+<div class="inff-list-wrap"><ul class="inff-list"><li>Rumus mana yang paling sering kamu gunakan hari ini?</li><li>Bagian mana yang paling banyak memakan waktu?</li><li>Apa yang akan kamu tingkatkan untuk ujian praktik berikutnya?</li><li>Target nilai praktikmu?</li></ul></div>
+<p style="margin-top:.8rem"><b>Skala pemahaman diri:</b> ____/10</p></div>
+<div class="inff-footer">MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) Semester 1 · Materi dibuat untuk bahan ajar Informatika</div>
+</div></div>
