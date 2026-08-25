@@ -1,0 +1,7 @@
+Machine:
+  Name:          omarchy-nate.tailef18bd.ts.net
+  ID:            nAuYc6vLYC21CNTRL
+  Addresses:     [100.119.139.23/32 fd7a:115c:a1e0::8232:8b18/128]
+User:
+  Name:     dkknate@gmail.com
+  ID:       406145311305287
