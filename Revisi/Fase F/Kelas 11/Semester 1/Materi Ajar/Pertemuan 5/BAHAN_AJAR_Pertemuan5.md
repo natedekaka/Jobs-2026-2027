@@ -191,4 +191,4 @@
 
 ---
 
-**MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) Semester 1**
+**MGMP Informatika SMAN 6 Cimahi — Fase F (Kelas XI) Semester 1** 
